@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Header from './Components/Header';
-import Body from './Components/Body';
-import Footer from './Components/Footer';
+import ReactDOM from 'react-dom';
+import Header from './Components/Header/Header';
+import Body from './Components/Body/Body';
+import Footer from './Components/Footer/Footer';
 import './scss/App.scss';
 
 class App extends Component {
@@ -13,6 +14,18 @@ class App extends Component {
         <Footer />
       </div>
     );
+  }
+
+
+  componentDidMount(){
+      this.lazyloading();
+  }
+
+  lazyloading(){
+      var element = ReactDOM.findDOMNode(this).getElementsByClassName('lazy');
+      setTimeout(function(){
+          element[0]["className"] += " loaded";
+      });
   }
 }
 
