@@ -31,3 +31,10 @@ img {
    visibility: visible;
    opacity: 1;
 }
+
+@media screen and (min-width: 1280px) {
+   .img-background {
+      top: -40%;
+      height: auto;
+   }
+}
