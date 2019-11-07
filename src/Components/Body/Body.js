@@ -3,6 +3,7 @@ import '../../scss/Body.scss';
 
 class Body extends Component {
   render() {
+    //test
     return (
       <div className="body-container">
         Body
